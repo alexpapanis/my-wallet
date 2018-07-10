@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		1693096777A4A4AA1CD762D6 /* Pods_MyWalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0F81502CC85EA5E016BE3F /* Pods_MyWalletTests.framework */; };
 		8D80509820F4503B005C4AF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D80509720F4503B005C4AF7 /* AppDelegate.swift */; };
-		8D80509A20F4503B005C4AF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D80509920F4503B005C4AF7 /* ViewController.swift */; };
 		8D80509D20F4503B005C4AF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D80509B20F4503B005C4AF7 /* Main.storyboard */; };
 		8D80509F20F4503E005C4AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D80509E20F4503E005C4AF7 /* Assets.xcassets */; };
 		8D8050A220F4503E005C4AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8050A020F4503E005C4AF7 /* LaunchScreen.storyboard */; };
 		8D8050AD20F4503E005C4AF7 /* MyWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8050AC20F4503E005C4AF7 /* MyWalletTests.swift */; };
 		8D8050B820F4503E005C4AF7 /* MyWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8050B720F4503E005C4AF7 /* MyWalletUITests.swift */; };
+		8D8050C920F45458005C4AF7 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8050C820F45458005C4AF7 /* WalletViewController.swift */; };
+		8D8050CB20F4552B005C4AF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D8050CA20F4552B005C4AF7 /* GoogleService-Info.plist */; };
+		8D8050CD20F45D77005C4AF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8050CC20F45D77005C4AF7 /* LoginViewController.swift */; };
 		BE71DDF19DB8C8A8B29E3D09 /* Pods_MyWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECBC8869BB5356A67CD8B8D /* Pods_MyWalletUITests.framework */; };
 		DB5D614D8DE7437400942CE8 /* Pods_MyWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDB737C61E96D446B468B1B /* Pods_MyWallet.framework */; };
 /* End PBXBuildFile section */
@@ -40,7 +42,6 @@
 		4ECBC8869BB5356A67CD8B8D /* Pods_MyWalletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWalletUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D80509420F4503B005C4AF7 /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D80509720F4503B005C4AF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D80509920F4503B005C4AF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D80509C20F4503B005C4AF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D80509E20F4503E005C4AF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D8050A120F4503E005C4AF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,9 @@
 		8D8050B320F4503E005C4AF7 /* MyWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8050B720F4503E005C4AF7 /* MyWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletUITests.swift; sourceTree = "<group>"; };
 		8D8050B920F4503E005C4AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D8050C820F45458005C4AF7 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		8D8050CA20F4552B005C4AF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8D8050CC20F45D77005C4AF7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		910E507C54233389F356CAFB /* Pods-MyWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletUITests/Pods-MyWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6EBD918C4A24AB6DE852BB /* Pods-MyWalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletUITests/Pods-MyWalletUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A873EAA7B9D6F85D0B693C85 /* Pods-MyWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWallet/Pods-MyWallet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,12 +128,11 @@
 		8D80509620F4503B005C4AF7 /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
-				8D80509720F4503B005C4AF7 /* AppDelegate.swift */,
-				8D80509920F4503B005C4AF7 /* ViewController.swift */,
-				8D80509B20F4503B005C4AF7 /* Main.storyboard */,
-				8D80509E20F4503E005C4AF7 /* Assets.xcassets */,
-				8D8050A020F4503E005C4AF7 /* LaunchScreen.storyboard */,
+				8D8050C620F45213005C4AF7 /* SupportingFiles */,
+				8D8050C720F45226005C4AF7 /* ViewControllers */,
+				8D8050C520F45206005C4AF7 /* Storyboards */,
 				8D8050A320F4503E005C4AF7 /* Info.plist */,
+				8D8050CA20F4552B005C4AF7 /* GoogleService-Info.plist */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -150,6 +153,33 @@
 				8D8050B920F4503E005C4AF7 /* Info.plist */,
 			);
 			path = MyWalletUITests;
+			sourceTree = "<group>";
+		};
+		8D8050C520F45206005C4AF7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8D80509B20F4503B005C4AF7 /* Main.storyboard */,
+				8D8050A020F4503E005C4AF7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8D8050C620F45213005C4AF7 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8D80509720F4503B005C4AF7 /* AppDelegate.swift */,
+				8D80509E20F4503E005C4AF7 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8D8050C720F45226005C4AF7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D8050C820F45458005C4AF7 /* WalletViewController.swift */,
+				8D8050CC20F45D77005C4AF7 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		ED57E36BED12DFFD7927FCF2 /* Pods */ = {
@@ -274,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8050A220F4503E005C4AF7 /* LaunchScreen.storyboard in Resources */,
+				8D8050CB20F4552B005C4AF7 /* GoogleService-Info.plist in Resources */,
 				8D80509F20F4503E005C4AF7 /* Assets.xcassets in Resources */,
 				8D80509D20F4503B005C4AF7 /* Main.storyboard in Resources */,
 			);
@@ -322,12 +353,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyWallet/Pods-MyWallet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -377,8 +422,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D80509A20F4503B005C4AF7 /* ViewController.swift in Sources */,
+				8D8050CD20F45D77005C4AF7 /* LoginViewController.swift in Sources */,
 				8D80509820F4503B005C4AF7 /* AppDelegate.swift in Sources */,
+				8D8050C920F45458005C4AF7 /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FMA3WV25L;
 				INFOPLIST_FILE = MyWallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,7 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FMA3WV25L;
 				INFOPLIST_FILE = MyWallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
