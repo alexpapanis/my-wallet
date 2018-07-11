@@ -8,32 +8,89 @@
 
 import UIKit
 import FBSDKCoreKit
+import FBSDKLoginKit
 
 class WalletViewController: UIViewController {
 
+    let service = Service()
+    let defaults = UserDefaults.standard
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var lbDisponivel: UILabel!
+    @IBOutlet weak var lbLucro: UILabel!
+    @IBOutlet weak var lbCapital: UILabel!
+    
+    @IBAction func fazerLogout(_ sender: UIBarButtonItem) {
+        let facebookLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        
+        facebookLoginManager.logOut()
+        FBSDKAccessToken.setCurrent(nil)
+        FBSDKProfile.setCurrent(nil)
+        
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func verTransacoes(_ sender: UIButton) {
+        performSegue(withIdentifier: "showTransacoes", sender: nil)
+    }
+    
+    
+    var cotacoesDoDia = [Cotacao]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        
         if FBSDKAccessToken.currentAccessTokenIsActive() {
             print(FBSDKAccessToken.current().appID)
+            defaults.set(FBSDKAccessToken.current().appID, forKey: "idUsuario")
         }
-        // Do any additional setup after loading the view.
+        
+        fetchData()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    fileprivate func fetchData(){
+        service.fetchCotacaoMoedaDia(completion: {cotacoesDoDia in
+            if cotacoesDoDia.count == 0 {
+                print("Erro!")
+                return
+            }
+            self.cotacoesDoDia = cotacoesDoDia
+            
+            self.tableView.reloadData()
+        })
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cotacoesDoDia.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cotacaoCell") as? CotacaoCell {
+            
+            cell.cotacao = cotacoesDoDia[indexPath.row]
+            cell.tag = indexPath.row
+            
+            return cell
+            
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header")
+        
+        return cell
+    }
+}
+
+

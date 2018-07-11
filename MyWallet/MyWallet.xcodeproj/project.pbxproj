@@ -17,6 +17,16 @@
 		8D8050C920F45458005C4AF7 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8050C820F45458005C4AF7 /* WalletViewController.swift */; };
 		8D8050CB20F4552B005C4AF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D8050CA20F4552B005C4AF7 /* GoogleService-Info.plist */; };
 		8D8050CD20F45D77005C4AF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8050CC20F45D77005C4AF7 /* LoginViewController.swift */; };
+		8DCA507A20F4E357001C2D56 /* Cotacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA507920F4E357001C2D56 /* Cotacao.swift */; };
+		8DCA507F20F4E9D9001C2D56 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA507E20F4E9D9001C2D56 /* Extensions.swift */; };
+		8DCA508220F4ECC5001C2D56 /* CotacaoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA508120F4ECC5001C2D56 /* CotacaoCell.swift */; };
+		8DCA508620F50046001C2D56 /* TransacaoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA508520F50046001C2D56 /* TransacaoCell.swift */; };
+		8DCA508820F50103001C2D56 /* Transacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA508720F50103001C2D56 /* Transacao.swift */; };
+		8DCA508A20F5033B001C2D56 /* TransacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA508920F5033B001C2D56 /* TransacaoViewController.swift */; };
+		8DCA508C20F503A7001C2D56 /* TransacaoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA508B20F503A7001C2D56 /* TransacaoViewModel.swift */; };
+		8DCA508E20F505C0001C2D56 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA508D20F505C0001C2D56 /* Utils.swift */; };
+		8DCA509120F51D63001C2D56 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA509020F51D63001C2D56 /* Service.swift */; };
+		8DCA509320F5201C001C2D56 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA509220F5201C001C2D56 /* Defines.swift */; };
 		BE71DDF19DB8C8A8B29E3D09 /* Pods_MyWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECBC8869BB5356A67CD8B8D /* Pods_MyWalletUITests.framework */; };
 		DB5D614D8DE7437400942CE8 /* Pods_MyWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDB737C61E96D446B468B1B /* Pods_MyWallet.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +65,16 @@
 		8D8050C820F45458005C4AF7 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		8D8050CA20F4552B005C4AF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D8050CC20F45D77005C4AF7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8DCA507920F4E357001C2D56 /* Cotacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cotacao.swift; sourceTree = "<group>"; };
+		8DCA507E20F4E9D9001C2D56 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8DCA508120F4ECC5001C2D56 /* CotacaoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CotacaoCell.swift; sourceTree = "<group>"; };
+		8DCA508520F50046001C2D56 /* TransacaoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransacaoCell.swift; sourceTree = "<group>"; };
+		8DCA508720F50103001C2D56 /* Transacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transacao.swift; sourceTree = "<group>"; };
+		8DCA508920F5033B001C2D56 /* TransacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransacaoViewController.swift; sourceTree = "<group>"; };
+		8DCA508B20F503A7001C2D56 /* TransacaoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransacaoViewModel.swift; sourceTree = "<group>"; };
+		8DCA508D20F505C0001C2D56 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8DCA509020F51D63001C2D56 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		8DCA509220F5201C001C2D56 /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		910E507C54233389F356CAFB /* Pods-MyWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletUITests/Pods-MyWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6EBD918C4A24AB6DE852BB /* Pods-MyWalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletUITests/Pods-MyWalletUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A873EAA7B9D6F85D0B693C85 /* Pods-MyWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWallet/Pods-MyWallet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,8 +149,12 @@
 			isa = PBXGroup;
 			children = (
 				8D8050C620F45213005C4AF7 /* SupportingFiles */,
-				8D8050C720F45226005C4AF7 /* ViewControllers */,
+				8DCA507B20F4E53E001C2D56 /* ViewModel */,
+				8DCA507820F4E316001C2D56 /* Modelo */,
 				8D8050C520F45206005C4AF7 /* Storyboards */,
+				8D8050C720F45226005C4AF7 /* ViewControllers */,
+				8DCA508020F4EBC5001C2D56 /* Cells */,
+				8DCA508F20F51D52001C2D56 /* Service */,
 				8D8050A320F4503E005C4AF7 /* Info.plist */,
 				8D8050CA20F4552B005C4AF7 /* GoogleService-Info.plist */,
 			);
@@ -169,6 +193,9 @@
 			children = (
 				8D80509720F4503B005C4AF7 /* AppDelegate.swift */,
 				8D80509E20F4503E005C4AF7 /* Assets.xcassets */,
+				8DCA507E20F4E9D9001C2D56 /* Extensions.swift */,
+				8DCA508D20F505C0001C2D56 /* Utils.swift */,
+				8DCA509220F5201C001C2D56 /* Defines.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -178,8 +205,43 @@
 			children = (
 				8D8050C820F45458005C4AF7 /* WalletViewController.swift */,
 				8D8050CC20F45D77005C4AF7 /* LoginViewController.swift */,
+				8DCA508920F5033B001C2D56 /* TransacaoViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8DCA507820F4E316001C2D56 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				8DCA507920F4E357001C2D56 /* Cotacao.swift */,
+				8DCA508720F50103001C2D56 /* Transacao.swift */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
+		8DCA507B20F4E53E001C2D56 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8DCA508B20F503A7001C2D56 /* TransacaoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8DCA508020F4EBC5001C2D56 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8DCA508120F4ECC5001C2D56 /* CotacaoCell.swift */,
+				8DCA508520F50046001C2D56 /* TransacaoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8DCA508F20F51D52001C2D56 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8DCA509020F51D63001C2D56 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		ED57E36BED12DFFD7927FCF2 /* Pods */ = {
@@ -359,7 +421,9 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -371,7 +435,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,9 +488,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCA509120F51D63001C2D56 /* Service.swift in Sources */,
+				8DCA507F20F4E9D9001C2D56 /* Extensions.swift in Sources */,
+				8DCA508220F4ECC5001C2D56 /* CotacaoCell.swift in Sources */,
 				8D8050CD20F45D77005C4AF7 /* LoginViewController.swift in Sources */,
 				8D80509820F4503B005C4AF7 /* AppDelegate.swift in Sources */,
+				8DCA508E20F505C0001C2D56 /* Utils.swift in Sources */,
+				8DCA509320F5201C001C2D56 /* Defines.swift in Sources */,
+				8DCA508820F50103001C2D56 /* Transacao.swift in Sources */,
+				8DCA508620F50046001C2D56 /* TransacaoCell.swift in Sources */,
+				8DCA507A20F4E357001C2D56 /* Cotacao.swift in Sources */,
 				8D8050C920F45458005C4AF7 /* WalletViewController.swift in Sources */,
+				8DCA508A20F5033B001C2D56 /* TransacaoViewController.swift in Sources */,
+				8DCA508C20F503A7001C2D56 /* TransacaoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

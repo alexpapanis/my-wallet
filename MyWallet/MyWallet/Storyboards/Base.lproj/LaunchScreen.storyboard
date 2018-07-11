@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +17,50 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ayc-lw-1Ld">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallet" translatesAutoresizingMaskIntoConstraints="NO" id="f60-uF-9Kx">
+                                        <rect key="frame" x="30" y="258" width="315" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Scp-Ed-jmr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Wallet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwB-Lr-Rlt">
+                                        <rect key="frame" x="20" y="208" width="335" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="f60-uF-9Kx" secondAttribute="trailing" constant="30" id="PqI-aw-I2T"/>
+                                    <constraint firstItem="f60-uF-9Kx" firstAttribute="centerY" secondItem="Ayc-lw-1Ld" secondAttribute="centerY" id="Rzz-Vb-r3x"/>
+                                    <constraint firstAttribute="trailing" secondItem="QwB-Lr-Rlt" secondAttribute="trailing" constant="20" id="U2p-4d-n9s"/>
+                                    <constraint firstItem="f60-uF-9Kx" firstAttribute="top" secondItem="QwB-Lr-Rlt" secondAttribute="bottom" constant="20" id="eEx-O9-hDp"/>
+                                    <constraint firstItem="f60-uF-9Kx" firstAttribute="leading" secondItem="Ayc-lw-1Ld" secondAttribute="leading" constant="30" id="i3k-Eh-1NR"/>
+                                    <constraint firstItem="QwB-Lr-Rlt" firstAttribute="leading" secondItem="Ayc-lw-1Ld" secondAttribute="leading" constant="20" id="uGF-Yf-C5e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ayc-lw-1Ld" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="5Y3-ur-qwF"/>
+                            <constraint firstItem="Ayc-lw-1Ld" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="81m-GT-ehP"/>
+                            <constraint firstItem="Ayc-lw-1Ld" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hr6-Zg-mjn"/>
+                            <constraint firstItem="Ayc-lw-1Ld" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="x6p-Xv-nbB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wallet" width="128" height="128"/>
+    </resources>
 </document>

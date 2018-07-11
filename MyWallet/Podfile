@@ -13,6 +13,7 @@ target 'MyWallet' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
+  pod 'SDWebImage/WebP'
 
   target 'MyWalletTests' do
     inherit! :search_paths
