@@ -9,6 +9,8 @@
 import UIKit
 
 class CotacaoCell: UITableViewCell {
+    
+    var delegate: CellDelegate!
 
     @IBOutlet weak var vwContentView: UIView!
     @IBOutlet weak var imgMoeda: UIImageView!
@@ -32,16 +34,25 @@ class CotacaoCell: UITableViewCell {
     }
     
     @IBAction func venderMoeda(_ sender: UIButton) {
-        var transacao = Transacao()
-        transacao.cotacao = cotacao.cotacaoCompra
-        transacao.dataTransacao = Date.init()
-        transacao.nomeMoeda = cotacao.moeda
-        transacao.tipoTransacao = "Compra"
-        transacao.idUsuario = UserDefaults.standard.string(forKey: "idUsuario")
+        if(self.delegate != nil){ //Just to be safe.
+            self.delegate.callVenderSegue(cotacao: cotacao)
+        }
+        
+//
+//
+//        var transacao = Transacao()
+//        transacao.cotacao = cotacao.cotacaoCompra
+//        transacao.dataTransacao = Date.init()
+//        transacao.nomeMoeda = cotacao.moeda
+//        transacao.tipoTransacao = "Compra"
+//        transacao.idUsuario = UserDefaults.standard.string(forKey: "idUsuario")
         
     }
     
     @IBAction func comprarMoeda(_ sender: UIButton) {
+        if(self.delegate != nil){ //Just to be safe.
+            self.delegate.callComprarSegue(cotacao: cotacao)
+        }
     }
     
 

@@ -12,16 +12,23 @@ import FBSDKLoginKit
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var btLoginFB: FBSDKLoginButton!
-        
+    
+    var delegate: CellDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         btLoginFB.readPermissions = ["public_profile", "email"]
         btLoginFB.delegate = self
         
-        if FBSDKAccessToken.currentAccessTokenIsActive() {
-            performSegue(withIdentifier: "showHome", sender: nil)
+        DispatchQueue.main.async {
+            if FBSDKAccessToken.currentAccessTokenIsActive() {
+                self.performSegue(withIdentifier: "showHome", sender: nil)
+            }
         }
+        
         
     }
 

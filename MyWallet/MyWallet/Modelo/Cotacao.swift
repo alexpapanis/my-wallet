@@ -17,6 +17,5 @@ class Cotacao: Decodable {
     var cotacaoVenda: Double?
     var dataHoraCotacao: String?
     var tipoBoletim: String?
-    
 }
 

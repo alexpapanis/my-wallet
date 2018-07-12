@@ -39,3 +39,17 @@ extension UIView {
     }
     
 }
+
+extension Double {
+    var converterMoeda: String {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.init(identifier: "pt-br") // Change this to another locale if you want to force a specific locale, otherwise this is redundant as the current locale is the default already
+        formatter.numberStyle = .currency
+        
+        if let moedaFormatada = formatter.string(from: self as NSNumber) {
+            return "\(moedaFormatada)"
+        }
+        
+        return ""
+    }
+}

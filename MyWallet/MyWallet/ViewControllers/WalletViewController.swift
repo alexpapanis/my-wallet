@@ -10,10 +10,21 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class WalletViewController: UIViewController {
+protocol CellDelegate {
+    func callComprarSegue(cotacao: Cotacao)
+    func callVenderSegue(cotacao: Cotacao)
+}
+
+class WalletViewController: UIViewController, CellDelegate {
 
     let service = Service()
     let defaults = UserDefaults.standard
+    
+    var tipoTransacao: TipoTransacao?
+    
+    var totalDisponivel: Double = 0
+    var lucro: Double = 0
+    var capital: Double = 0
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -48,11 +59,15 @@ class WalletViewController: UIViewController {
             defaults.set(FBSDKAccessToken.current().appID, forKey: "idUsuario")
         }
         
-        fetchData()
+        lbDisponivel.text = totalDisponivel.converterMoeda
+        lbLucro.text = lucro.converterMoeda
+        lbCapital.text = capital.converterMoeda
+        
+        buscarCotacoes()
         
     }
 
-    fileprivate func fetchData(){
+    fileprivate func buscarCotacoes(){
         service.fetchCotacaoMoedaDia(completion: {cotacoesDoDia in
             if cotacoesDoDia.count == 0 {
                 print("Erro!")
@@ -63,6 +78,27 @@ class WalletViewController: UIViewController {
             self.tableView.reloadData()
         })
         
+    }
+    
+    func callVenderSegue(cotacao: Cotacao){
+        tipoTransacao = TipoTransacao.venda
+        self.performSegue(withIdentifier: "showBoleta", sender: cotacao)
+    }
+    
+    func callComprarSegue(cotacao: Cotacao){
+        tipoTransacao = TipoTransacao.compra
+        self.performSegue(withIdentifier: "showBoleta", sender: cotacao)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showBoleta"{
+            if let vc = segue.destination as? BoletaViewController {
+                if let cotacao = sender as? Cotacao {
+                    vc.cotacao = cotacao
+                    vc.tipoTransacao = tipoTransacao
+                }
+            }
+        }
     }
     
 }
@@ -78,6 +114,8 @@ extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
             
             cell.cotacao = cotacoesDoDia[indexPath.row]
             cell.tag = indexPath.row
+            
+            cell.delegate = self
             
             return cell
             

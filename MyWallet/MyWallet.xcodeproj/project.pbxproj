@@ -27,6 +27,7 @@
 		8DCA508E20F505C0001C2D56 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA508D20F505C0001C2D56 /* Utils.swift */; };
 		8DCA509120F51D63001C2D56 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA509020F51D63001C2D56 /* Service.swift */; };
 		8DCA509320F5201C001C2D56 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA509220F5201C001C2D56 /* Defines.swift */; };
+		8DCA509520F6E6BF001C2D56 /* BoletaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA509420F6E6BF001C2D56 /* BoletaViewController.swift */; };
 		BE71DDF19DB8C8A8B29E3D09 /* Pods_MyWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECBC8869BB5356A67CD8B8D /* Pods_MyWalletUITests.framework */; };
 		DB5D614D8DE7437400942CE8 /* Pods_MyWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDB737C61E96D446B468B1B /* Pods_MyWallet.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		8DCA508D20F505C0001C2D56 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8DCA509020F51D63001C2D56 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		8DCA509220F5201C001C2D56 /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
+		8DCA509420F6E6BF001C2D56 /* BoletaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoletaViewController.swift; sourceTree = "<group>"; };
 		910E507C54233389F356CAFB /* Pods-MyWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletUITests/Pods-MyWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6EBD918C4A24AB6DE852BB /* Pods-MyWalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletUITests/Pods-MyWalletUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A873EAA7B9D6F85D0B693C85 /* Pods-MyWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWallet/Pods-MyWallet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				8D8050C820F45458005C4AF7 /* WalletViewController.swift */,
 				8D8050CC20F45D77005C4AF7 /* LoginViewController.swift */,
 				8DCA508920F5033B001C2D56 /* TransacaoViewController.swift */,
+				8DCA509420F6E6BF001C2D56 /* BoletaViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				8DCA509120F51D63001C2D56 /* Service.swift in Sources */,
 				8DCA507F20F4E9D9001C2D56 /* Extensions.swift in Sources */,
 				8DCA508220F4ECC5001C2D56 /* CotacaoCell.swift in Sources */,
+				8DCA509520F6E6BF001C2D56 /* BoletaViewController.swift in Sources */,
 				8D8050CD20F45D77005C4AF7 /* LoginViewController.swift in Sources */,
 				8D80509820F4503B005C4AF7 /* AppDelegate.swift in Sources */,
 				8DCA508E20F505C0001C2D56 /* Utils.swift in Sources */,
