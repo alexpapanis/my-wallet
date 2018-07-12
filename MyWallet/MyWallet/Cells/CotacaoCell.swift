@@ -28,8 +28,8 @@ class CotacaoCell: UITableViewCell {
                 imgMoeda.image = UIImage(named: "bitcoin")
             }
             
-            lbCotacaoVenda.text = "\(cotacao.cotacaoVenda!)"
-            lbCotacaoCompra.text = "\(cotacao.cotacaoCompra!)"
+            lbCotacaoVenda.text = "\(cotacao.cotacaoVenda!.converterMoeda)"
+            lbCotacaoCompra.text = "\(cotacao.cotacaoCompra!.converterMoeda)"
         }
     }
     

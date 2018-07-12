@@ -52,4 +52,18 @@ extension Double {
         
         return ""
     }
+    
+    var converterPorcentagem: String {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.init(identifier: "pt-br") // Change this to another locale if you want to force a specific locale, otherwise this is redundant as the current locale is the default already
+        formatter.numberStyle = .percent
+        formatter.maximumFractionDigits = 1
+        
+        if let moedaFormatada = formatter.string(from: self as NSNumber) {
+            return "\(moedaFormatada)"
+        }
+        
+        return ""
+    }
+    
 }

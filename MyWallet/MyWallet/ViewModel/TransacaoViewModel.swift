@@ -19,7 +19,7 @@ struct TransacaoViewModel {
     var capitalAtual: Double?
     var porcentagemLucro: Double?
     
-    init(transacao: Transacao){
+    init(transacao: TransacaoTotal){
         self.imagemMoeda = transacao.imagemMoeda
         self.nomeMoeda = transacao.nomeMoeda
         self.tipoTransacao = transacao.tipoTransacao

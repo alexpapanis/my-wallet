@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Transacao: Decodable {
+class TransacaoTotal: Decodable {
     var idUsuario: String?
     var imagemMoeda: String?
     var nomeMoeda: String?

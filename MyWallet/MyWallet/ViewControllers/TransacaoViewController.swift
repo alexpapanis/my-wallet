@@ -7,17 +7,48 @@
 //
 
 import UIKit
+import CoreData
 
 class TransacaoViewController: UIViewController {
 
-    var transacaoViewModels = [TransacaoViewModel]()
+    var tipoTransacao: TipoTransacao?
+    var transacoes: [Transacao] = []
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        buscarTransacoes()
+        
+        self.navigationController?.navigationBar.tintColor = .white
+        
     }
 
+    
+    func buscarTransacoes() {
+        
+        
+        let fetchRequest: NSFetchRequest<Transacao> = Transacao.fetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(Transacao.data), ascending: false)
+        fetchRequest.sortDescriptors = [sort]
+        
+        do{
+            if tipoTransacao != nil {
+                fetchRequest.predicate = NSPredicate(format: "tipo == %@", (tipoTransacao?.rawValue)!)
+            }
+            
+            transacoes = try PersistenceService.context.fetch(fetchRequest)
+            print(transacoes.count)
+            tableView.reloadData()
+            
+        } catch {
+            print("Error while fetching Atividades")
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -32,18 +63,24 @@ class TransacaoViewController: UIViewController {
 
 extension TransacaoViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return transacaoViewModels.count
+        return transacoes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "transacaoCell") as? TransacaoCell {
             
-            cell.transacaoViewModel = transacaoViewModels[indexPath.row]
+            cell.transacao = transacoes[indexPath.row]
             
             return cell
             
         } else {
             return UITableViewCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header")
+        
+        return cell
     }
 }

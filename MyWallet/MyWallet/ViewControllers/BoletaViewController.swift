@@ -7,21 +7,26 @@
 //
 
 import UIKit
+import CoreData
 
-enum TipoTransacao: Equatable {
+enum TipoTransacao: String {
     case compra
     case venda
 }
 
 class BoletaViewController: UIViewController {
 
-    var cotacao: Cotacao?
+    //MARK: - Variaveis e constantes
+    
+    var cotacao: Cotacao!
     var tipoTransacao: TipoTransacao?
     fileprivate var valorCotacao: Double?
     fileprivate var totalTransacao: Double?
     fileprivate var keyboardHeight: CGFloat = 0
     
-    @IBOutlet weak var vwBoletaCenterY: NSLayoutConstraint!
+    let transacaoClassName:String = String(describing: Transacao.self)
+    
+    //MARK: - IB Outlets
     
     @IBOutlet weak var lbTitulo: UILabel!
     @IBOutlet weak var vwBoleta: UIView!
@@ -29,6 +34,9 @@ class BoletaViewController: UIViewController {
     @IBOutlet weak var lbValorCotacao: UILabel!
     @IBOutlet weak var lbTotalTransacao: UILabel!
     @IBOutlet weak var btEfetivarTransacao: UIButton!
+    @IBOutlet weak var vwBoletaCenterY: NSLayoutConstraint!
+    
+    //MARK: - IB Actions
     
     @IBAction func cancelar(_ sender: UIButton) {
         txQuantidade.resignFirstResponder()
@@ -36,6 +44,23 @@ class BoletaViewController: UIViewController {
     }
     
     @IBAction func efetivarTransacao(_ sender: UIButton) {
+        
+        let transacao = NSEntityDescription.insertNewObject(forEntityName: self.transacaoClassName, into: PersistenceService.context) as! Transacao
+        
+        transacao.codigoMoeda = cotacao.moeda!
+        transacao.moeda = cotacao.moeda!
+        transacao.cotacao = tipoTransacao?.rawValue == "compra" ? cotacao.cotacaoCompra! : cotacao.cotacaoVenda!
+        transacao.data = NSDate.init()
+        transacao.tipo = tipoTransacao?.rawValue
+        transacao.quantidade = Double(txQuantidade.text!)!
+        PersistenceService.saveContext()
+        
+        let alertController = UIAlertController(title: "Sucesso!", message: "Sua \(transacao.tipo!) foi realizada com sucesso.", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .default, handler: {_ in
+            self.dismiss(animated: true, completion: nil)
+        })
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
         
     }
     
