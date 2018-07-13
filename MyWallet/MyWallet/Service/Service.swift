@@ -15,7 +15,7 @@ public class Service {
     func fetchCotacaoMoedaDia(completion: @escaping (_ cotacao: [Cotacao]) ->Void){
         var cotacoesDoDia: [Cotacao] = []
         
-        let hoje = Date.init()
+        let hoje = Date.init().yesterday
         
         let df = DateFormatter()
         df.dateFormat = "MM-dd-YYYY"
@@ -96,7 +96,7 @@ public class Service {
     func getCotacaoBrita(completion: @escaping (_ cotacao: Cotacao) ->Void){
         var cotacaoBrita: Cotacao = Cotacao()
         
-        let hoje = Date.init()
+        let hoje = Date.init().yesterday
         
         let df = DateFormatter()
         df.dateFormat = "MM-dd-YYYY"
@@ -147,7 +147,7 @@ public class Service {
     }
     
     func getCotacaoBitcoin(completion: @escaping (_ cotacao: Cotacao) ->Void){
-        var cotacaoBitcoin: Cotacao = Cotacao()
+        let cotacaoBitcoin: Cotacao = Cotacao()
         
         let urlBitcoin = URL(string: "https://www.mercadobitcoin.net/api/BTC/ticker/")!
         Alamofire.request(urlBitcoin).responseJSON { response in

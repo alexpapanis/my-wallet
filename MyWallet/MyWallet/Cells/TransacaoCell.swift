@@ -45,7 +45,7 @@ class TransacaoCell: UITableViewCell {
                     self.lbPorcentagemLucro.textColor = porcentagem >= 0.0 ? .blue : .red
                 })
             } else {
-                service.getCotacaoBitcoin(completion: {cotacao in
+                service.getCotacaoBrita(completion: {cotacao in
                     
                     var cotacaoUsada = 0.0
                     

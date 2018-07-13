@@ -2,7 +2,7 @@
 //  Carteira+CoreDataProperties.swift
 //  
 //
-//  Created by Alexandre Papanis on 12/07/18.
+//  Created by Alexandre Papanis on 12/07/2018.
 //
 //
 
@@ -18,5 +18,7 @@ extension Carteira {
 
     @NSManaged public var saldo: Double
     @NSManaged public var totalInvestido: Double
+    @NSManaged public var qtdeBrita: Double
+    @NSManaged public var qtdeBitcoin: Double
 
 }

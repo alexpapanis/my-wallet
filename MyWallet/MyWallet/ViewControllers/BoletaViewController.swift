@@ -14,10 +14,13 @@ enum TipoTransacao: String {
     case venda
 }
 
-class BoletaViewController: UIViewController {
+protocol BoletaDelegate {
+    func atualizarValores(transacao: Transacao)
+}
 
-    //MARK: - Variaveis e constantes
+class BoletaViewController: UIViewController {
     
+    //MARK: - Variaveis e constantes
     var cotacao: Cotacao!
     var tipoTransacao: TipoTransacao?
     fileprivate var valorCotacao: Double?
@@ -25,6 +28,8 @@ class BoletaViewController: UIViewController {
     fileprivate var keyboardHeight: CGFloat = 0
     
     let transacaoClassName:String = String(describing: Transacao.self)
+    
+    var boletaDelegate: BoletaDelegate?
     
     //MARK: - IB Outlets
     
@@ -55,6 +60,8 @@ class BoletaViewController: UIViewController {
         transacao.quantidade = Double(txQuantidade.text!)!
         PersistenceService.saveContext()
         
+        boletaDelegate?.atualizarValores(transacao: transacao)
+        
         let alertController = UIAlertController(title: "Sucesso!", message: "Sua \(transacao.tipo!) foi realizada com sucesso.", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "OK", style: .default, handler: {_ in
             self.dismiss(animated: true, completion: nil)
@@ -66,7 +73,7 @@ class BoletaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         txQuantidade.becomeFirstResponder()
         
         if case tipoTransacao = TipoTransacao.compra {

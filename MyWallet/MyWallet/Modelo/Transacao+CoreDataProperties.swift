@@ -2,7 +2,7 @@
 //  Transacao+CoreDataProperties.swift
 //  
 //
-//  Created by Alexandre Papanis on 12/07/18.
+//  Created by Alexandre Papanis on 12/07/2018.
 //
 //
 
@@ -16,12 +16,12 @@ extension Transacao {
         return NSFetchRequest<Transacao>(entityName: "Transacao")
     }
 
-    @NSManaged public var id: Int16
-    @NSManaged public var tipo: String?
+    @NSManaged public var codigoMoeda: String?
     @NSManaged public var cotacao: Double
     @NSManaged public var data: NSDate?
+    @NSManaged public var id: Int16
     @NSManaged public var moeda: String?
-    @NSManaged public var codigoMoeda: String?
     @NSManaged public var quantidade: Double
+    @NSManaged public var tipo: String?
 
 }
