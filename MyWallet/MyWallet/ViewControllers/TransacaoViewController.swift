@@ -29,24 +29,10 @@ class TransacaoViewController: UIViewController {
     
     func buscarTransacoes() {
         
-        
-        let fetchRequest: NSFetchRequest<Transacao> = Transacao.fetchRequest()
-        let sort = NSSortDescriptor(key: #keyPath(Transacao.data), ascending: false)
-        fetchRequest.sortDescriptors = [sort]
-        
-        do{
-            if tipoTransacao != nil {
-                fetchRequest.predicate = NSPredicate(format: "tipo == %@", (tipoTransacao?.rawValue)!)
-            }
-            
-            transacoes = try PersistenceService.context.fetch(fetchRequest)
-            print(transacoes.count)
-            tableView.reloadData()
-            
-        } catch {
-            print("Error while fetching Atividades")
-        }
-        
+        transacoes = DBHelper().getTransacoes(tipoTransacao)
+        print(transacoes.count)
+        tableView.reloadData()
+
     }
     
     /*

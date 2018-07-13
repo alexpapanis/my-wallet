@@ -29,11 +29,13 @@
 		8DCA509520F6E6BF001C2D56 /* BoletaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA509420F6E6BF001C2D56 /* BoletaViewController.swift */; };
 		8DCA50A020F847C1001C2D56 /* Carteira+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA509E20F847C1001C2D56 /* Carteira+CoreDataClass.swift */; };
 		8DCA50A120F847C1001C2D56 /* Transacao+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA509F20F847C1001C2D56 /* Transacao+CoreDataClass.swift */; };
-		8DCA50A420F847D6001C2D56 /* Transacao+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA50A220F847D6001C2D56 /* Transacao+CoreDataProperties.swift */; };
-		8DCA50A520F847D6001C2D56 /* Carteira+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA50A320F847D6001C2D56 /* Carteira+CoreDataProperties.swift */; };
 		BE71DDF19DB8C8A8B29E3D09 /* Pods_MyWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECBC8869BB5356A67CD8B8D /* Pods_MyWalletUITests.framework */; };
 		D9BE393E20F79B4300CAAED7 /* MyWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9BE393C20F79B4300CAAED7 /* MyWallet.xcdatamodeld */; };
 		D9BE395420F79EAE00CAAED7 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE395320F79EAE00CAAED7 /* PersistenceService.swift */; };
+		D9E4EFFE20F8DA1600AFC8C6 /* Carteira+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4EFFC20F8DA1600AFC8C6 /* Carteira+CoreDataProperties.swift */; };
+		D9E4EFFF20F8DA1600AFC8C6 /* Transacao+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4EFFD20F8DA1600AFC8C6 /* Transacao+CoreDataProperties.swift */; };
+		D9E4F00220F8DC0900AFC8C6 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4F00120F8DC0900AFC8C6 /* DBHelper.swift */; };
+		D9E4F00420F8F6BB00AFC8C6 /* TransacaoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4F00320F8F6BB00AFC8C6 /* TransacaoHelper.swift */; };
 		DB5D614D8DE7437400942CE8 /* Pods_MyWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDB737C61E96D446B468B1B /* Pods_MyWallet.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,8 +85,6 @@
 		8DCA509420F6E6BF001C2D56 /* BoletaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoletaViewController.swift; sourceTree = "<group>"; };
 		8DCA509E20F847C1001C2D56 /* Carteira+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Carteira+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8DCA509F20F847C1001C2D56 /* Transacao+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transacao+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8DCA50A220F847D6001C2D56 /* Transacao+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Transacao+CoreDataProperties.swift"; path = "/Users/alexpapanis/Documents/Projetos/Papanis/MyWallet/my-wallet/MyWallet/MyWallet/Modelo/Transacao+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		8DCA50A320F847D6001C2D56 /* Carteira+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Carteira+CoreDataProperties.swift"; path = "/Users/alexpapanis/Documents/Projetos/Papanis/MyWallet/my-wallet/MyWallet/MyWallet/Modelo/Carteira+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		910E507C54233389F356CAFB /* Pods-MyWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletUITests/Pods-MyWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6EBD918C4A24AB6DE852BB /* Pods-MyWalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletUITests/Pods-MyWalletUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A873EAA7B9D6F85D0B693C85 /* Pods-MyWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWallet/Pods-MyWallet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +93,10 @@
 		BDDB737C61E96D446B468B1B /* Pods_MyWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BE393D20F79B4300CAAED7 /* MyWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyWallet.xcdatamodel; sourceTree = "<group>"; };
 		D9BE395320F79EAE00CAAED7 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		D9E4EFFC20F8DA1600AFC8C6 /* Carteira+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Carteira+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D9E4EFFD20F8DA1600AFC8C6 /* Transacao+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transacao+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D9E4F00120F8DC0900AFC8C6 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		D9E4F00320F8F6BB00AFC8C6 /* TransacaoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransacaoHelper.swift; sourceTree = "<group>"; };
 		ECC719B31C1D8A67A551AD03 /* Pods-MyWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWallet/Pods-MyWallet.release.xcconfig"; sourceTree = "<group>"; };
 		F4036F5FF959B2E8EE7969BA /* Pods-MyWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWalletTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWalletTests/Pods-MyWalletTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +164,7 @@
 		8D80509620F4503B005C4AF7 /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				D9E4F00020F8DADF00AFC8C6 /* Helpers */,
 				8D8050C620F45213005C4AF7 /* SupportingFiles */,
 				8DCA507B20F4E53E001C2D56 /* ViewModel */,
 				8DCA507820F4E316001C2D56 /* Modelo */,
@@ -226,8 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				8DCA509E20F847C1001C2D56 /* Carteira+CoreDataClass.swift */,
-				8DCA50A320F847D6001C2D56 /* Carteira+CoreDataProperties.swift */,
-				8DCA50A220F847D6001C2D56 /* Transacao+CoreDataProperties.swift */,
+				D9E4EFFC20F8DA1600AFC8C6 /* Carteira+CoreDataProperties.swift */,
+				D9E4EFFD20F8DA1600AFC8C6 /* Transacao+CoreDataProperties.swift */,
 				8DCA509F20F847C1001C2D56 /* Transacao+CoreDataClass.swift */,
 				8DCA507920F4E357001C2D56 /* Cotacao.swift */,
 				8DCA508720F50103001C2D56 /* Transacao.swift */,
@@ -260,6 +265,15 @@
 				D9BE395320F79EAE00CAAED7 /* PersistenceService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D9E4F00020F8DADF00AFC8C6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D9E4F00120F8DC0900AFC8C6 /* DBHelper.swift */,
+				D9E4F00320F8F6BB00AFC8C6 /* TransacaoHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		ED57E36BED12DFFD7927FCF2 /* Pods */ = {
@@ -507,13 +521,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DCA509120F51D63001C2D56 /* Service.swift in Sources */,
-				8DCA50A420F847D6001C2D56 /* Transacao+CoreDataProperties.swift in Sources */,
 				8DCA507F20F4E9D9001C2D56 /* Extensions.swift in Sources */,
 				8DCA508220F4ECC5001C2D56 /* CotacaoCell.swift in Sources */,
 				8DCA509520F6E6BF001C2D56 /* BoletaViewController.swift in Sources */,
 				D9BE395420F79EAE00CAAED7 /* PersistenceService.swift in Sources */,
-				8DCA50A520F847D6001C2D56 /* Carteira+CoreDataProperties.swift in Sources */,
+				D9E4EFFE20F8DA1600AFC8C6 /* Carteira+CoreDataProperties.swift in Sources */,
 				8DCA50A120F847C1001C2D56 /* Transacao+CoreDataClass.swift in Sources */,
+				D9E4F00420F8F6BB00AFC8C6 /* TransacaoHelper.swift in Sources */,
+				D9E4F00220F8DC0900AFC8C6 /* DBHelper.swift in Sources */,
 				8D80509820F4503B005C4AF7 /* AppDelegate.swift in Sources */,
 				D9BE393E20F79B4300CAAED7 /* MyWallet.xcdatamodeld in Sources */,
 				8DCA508E20F505C0001C2D56 /* Utils.swift in Sources */,
@@ -522,6 +537,7 @@
 				8DCA508620F50046001C2D56 /* TransacaoCell.swift in Sources */,
 				8DCA50A020F847C1001C2D56 /* Carteira+CoreDataClass.swift in Sources */,
 				8DCA507A20F4E357001C2D56 /* Cotacao.swift in Sources */,
+				D9E4EFFF20F8DA1600AFC8C6 /* Transacao+CoreDataProperties.swift in Sources */,
 				8D8050C920F45458005C4AF7 /* WalletViewController.swift in Sources */,
 				8DCA508A20F5033B001C2D56 /* TransacaoViewController.swift in Sources */,
 				8DCA508C20F503A7001C2D56 /* TransacaoViewModel.swift in Sources */,

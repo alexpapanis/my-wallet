@@ -22,14 +22,17 @@ class BoletaViewController: UIViewController {
     
     //MARK: - Variaveis e constantes
     var cotacao: Cotacao!
+    var moeda: String?
     var tipoTransacao: TipoTransacao?
     fileprivate var valorCotacao: Double?
     fileprivate var totalTransacao: Double?
     fileprivate var keyboardHeight: CGFloat = 0
     
-    let transacaoClassName:String = String(describing: Transacao.self)
+    fileprivate let transacaoClassName:String = String(describing: Transacao.self)
+    fileprivate var mensagemErroValidacao: String?
     
     var boletaDelegate: BoletaDelegate?
+    
     
     //MARK: - IB Outlets
     
@@ -50,24 +53,52 @@ class BoletaViewController: UIViewController {
     
     @IBAction func efetivarTransacao(_ sender: UIButton) {
         
-        let transacao = NSEntityDescription.insertNewObject(forEntityName: self.transacaoClassName, into: PersistenceService.context) as! Transacao
+        let carteira = DBHelper().getCarteira()
         
-        transacao.codigoMoeda = cotacao.moeda!
-        transacao.moeda = cotacao.moeda!
-        transacao.cotacao = tipoTransacao?.rawValue == "compra" ? cotacao.cotacaoCompra! : cotacao.cotacaoVenda!
-        transacao.data = NSDate.init()
-        transacao.tipo = tipoTransacao?.rawValue
-        transacao.quantidade = Double(txQuantidade.text!)!
-        PersistenceService.saveContext()
+        let validacao = validaTransacao(carteira)
         
-        boletaDelegate?.atualizarValores(transacao: transacao)
+        if  validacao.valido {
+            let transacao = NSEntityDescription.insertNewObject(forEntityName: self.transacaoClassName, into: PersistenceService.context) as! Transacao
+            
+            transacao.codigoMoeda = cotacao.moeda!
+            transacao.moeda = cotacao.moeda!
+            transacao.cotacao = tipoTransacao?.rawValue == "compra" ? cotacao.cotacaoCompra! : cotacao.cotacaoVenda!
+            transacao.data = NSDate.init()
+            transacao.tipo = tipoTransacao?.rawValue
+            transacao.quantidade = Double(txQuantidade.text ?? "0")!
+            PersistenceService.saveContext()
+            
+            boletaDelegate?.atualizarValores(transacao: transacao)
+            
+            let alertController = UIAlertController(title: "Sucesso!", message: "Sua \(transacao.tipo!) foi realizada com sucesso.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .default, handler: {_ in
+                self.dismiss(animated: true, completion: nil)
+            })
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+        } else {
+            let alertController = UIAlertController(title: "Aviso!", message: validacao.mensagem, preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+        }
         
-        let alertController = UIAlertController(title: "Sucesso!", message: "Sua \(transacao.tipo!) foi realizada com sucesso.", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "OK", style: .default, handler: {_ in
-            self.dismiss(animated: true, completion: nil)
-        })
-        alertController.addAction(cancelAction)
-        present(alertController, animated: true, completion: nil)
+        
+        
+        
+        
+    }
+    
+    func validaTransacao(_ carteira: Carteira) -> RespostaValidacao{
+        var resposta = RespostaValidacao()
+        
+        if tipoTransacao?.rawValue == "venda"{
+            let quantidadeCarteira = moeda == "Bitcoin" ? carteira.qtdeBitcoin : carteira.qtdeBrita
+            resposta = TransacaoHelper().validaVenda(quantidadeCarteira: quantidadeCarteira, quantidade: Double(txQuantidade.text! != "" ? txQuantidade.text! : "0")!)
+        } else {
+            resposta = TransacaoHelper().validaCompra(saldo: carteira.saldo, quantidade: Double(txQuantidade.text! != "" ? txQuantidade.text! : "0")!, valorCotacao: cotacao.cotacaoCompra!)
+        }
+        return resposta
         
     }
     

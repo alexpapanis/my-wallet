@@ -12,7 +12,7 @@ class Utils {
     
     static func formatarData(data: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
         let dataHoraFormatadaStr = dateFormatter.string(from: data)
         
         return dataHoraFormatadaStr

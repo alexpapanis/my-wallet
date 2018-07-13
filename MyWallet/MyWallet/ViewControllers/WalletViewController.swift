@@ -145,41 +145,33 @@ class WalletViewController: UIViewController, CellDelegate, BoletaDelegate {
     
     func atualizarValores(transacao: Transacao) {
         
+        let carteira = DBHelper().getCarteira()
+        
         if transacao.tipo == TipoTransacao.compra.rawValue {
-            let fetchRequest: NSFetchRequest<Carteira> = Carteira.fetchRequest()
-            do {
-                carteira = try PersistenceService.context.fetch(fetchRequest).first
-            } catch {
-                print("Erro ao pegar carteira no banco")
-            }
-            
             if transacao.moeda == "Bitcoin" {
-                carteira?.qtdeBitcoin += transacao.quantidade
+                carteira.qtdeBitcoin += transacao.quantidade
             } else {
-                carteira?.qtdeBrita += transacao.quantidade
+                carteira.qtdeBrita += transacao.quantidade
             }
-            carteira?.saldo -= (transacao.quantidade*transacao.cotacao)
+            carteira.saldo -= (transacao.quantidade*transacao.cotacao)
         } else {
-            let fetchRequest: NSFetchRequest<Carteira> = Carteira.fetchRequest()
-            do {
-                carteira = try PersistenceService.context.fetch(fetchRequest).first
-            } catch {
-                print("Erro ao pegar carteira no banco")
-            }
-            
+           
             if transacao.moeda == "Bitcoin" {
-                carteira?.qtdeBitcoin -= transacao.quantidade
+                carteira.qtdeBitcoin -= transacao.quantidade
             } else {
-                carteira?.qtdeBrita -= transacao.quantidade
+                carteira.qtdeBrita -= transacao.quantidade
             }
-            carteira?.saldo += (transacao.quantidade*transacao.cotacao)
+            carteira.saldo += (transacao.quantidade*transacao.cotacao)
         }
         PersistenceService.saveContext()
         
-        lbDisponivel.text = "\(carteira?.saldo.converterMoeda ?? 0.0.converterMoeda)"
+        self.lbQtdeBitcoin.text = "\(carteira.qtdeBitcoin)"
+        self.lbTotalBitcoin.text = "\((carteira.qtdeBitcoin * cotacaoBitcoin).converterMoeda)"
+        self.lbQtdeBrita.text = "\(carteira.qtdeBrita)"
+        self.lbTotalBrita.text = "\((carteira.qtdeBrita * cotacaoBrita).converterMoeda)"
         
+        self.lbDisponivel.text = "\(carteira.saldo.converterMoeda)"
         self.lbLucro.text = "\(((self.totalDisponivel + (self.qtdeBrita*self.cotacaoBrita) + (self.qtdeBitcoin*self.cotacaoBitcoin)) - 100000.0).converterMoeda)"
-        
         self.lbCapital.text = "\((self.totalDisponivel + (self.qtdeBrita*self.cotacaoBrita) + (self.qtdeBitcoin*self.cotacaoBitcoin)).converterMoeda)"
     }
     

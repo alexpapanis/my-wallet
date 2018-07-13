@@ -21,9 +21,54 @@ class MyWalletTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testValidaTransacaoVendaFalha(){
+        
+        let qtdeCarteira = 0.0
+        let qtdeAVender = 50.0
+        
+        let helper = TransacaoHelper()
+        let resposta = helper.validaVenda(quantidadeCarteira: qtdeCarteira, quantidade: qtdeAVender)
+        
+        XCTAssertEqual(resposta.valido, false, "Não possui quantidade disponível para venda")
+        
+    }
+    
+    func testValidaTransacaoVendaSucesso(){
+        
+        let qtdeCarteira = 10.0
+        let qtdeAVender = 5.0
+        
+        let helper = TransacaoHelper()
+        let resposta = helper.validaVenda(quantidadeCarteira: qtdeCarteira, quantidade: qtdeAVender)
+        
+        XCTAssertEqual(resposta.valido, true, "Venda realizada com sucesso")
+        
+    }
+    
+    func testValidaTransacaoCompraFalha(){
+        
+        let qtdeAComprar = 10.0
+        let valorCotacao = 5000.0
+        let saldoCarteira = 40000.0
+        
+        let helper = TransacaoHelper()
+        let resposta = helper.validaCompra(saldo: saldoCarteira, quantidade: qtdeAComprar, valorCotacao: valorCotacao)
+        
+        XCTAssertEqual(resposta.valido, false, "Não tem saldo suficiente para efetivar transacao")
+        
+    }
+    
+    func testValidaTransacaoCompraSucesso(){
+        
+        let qtdeAComprar = 1.0
+        let valorCotacao = 5000.0
+        let saldoCarteira = 40000.0
+        
+        let helper = TransacaoHelper()
+        let resposta = helper.validaCompra(saldo: saldoCarteira, quantidade: qtdeAComprar, valorCotacao: valorCotacao)
+        
+        XCTAssertEqual(resposta.valido, true, "Compra realizada com sucesso")
+        
     }
     
     func testPerformanceExample() {

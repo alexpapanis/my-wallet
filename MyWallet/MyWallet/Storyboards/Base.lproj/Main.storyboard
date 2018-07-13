@@ -714,10 +714,10 @@
                                                             <rect key="frame" x="10" y="0.0" width="355" height="37.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbx-lX-SC4">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="68" height="37.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="115.5" height="37.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTDE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJY-nc-boW">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="37.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="115.5" height="37.5"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -732,10 +732,10 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8p-FW-QsR">
-                                                                    <rect key="frame" x="72" y="0.0" width="67.5" height="37.5"/>
+                                                                    <rect key="frame" x="119.5" y="0.0" width="116" height="37.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COTAÇÃO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Et-Km-8Eg">
-                                                                            <rect key="frame" x="4" y="4" width="59" height="29.5"/>
+                                                                            <rect key="frame" x="4" y="4" width="107.5" height="29.5"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -758,10 +758,10 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpv-Kz-hwk">
-                                                                    <rect key="frame" x="143.5" y="0.0" width="68" height="37.5"/>
+                                                                    <rect key="frame" x="239.5" y="0.0" width="115.5" height="37.5"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TTL INVEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLe-Zl-5wE">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="37.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLe-Zl-5wE">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="115.5" height="37.5"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -773,42 +773,6 @@
                                                                         <constraint firstItem="rLe-Zl-5wE" firstAttribute="top" secondItem="Kpv-Kz-hwk" secondAttribute="top" id="8FR-OJ-okW"/>
                                                                         <constraint firstAttribute="bottom" secondItem="rLe-Zl-5wE" secondAttribute="bottom" id="j6P-dt-sEO"/>
                                                                         <constraint firstAttribute="trailing" secondItem="rLe-Zl-5wE" secondAttribute="trailing" id="urw-Zy-WAO"/>
-                                                                    </constraints>
-                                                                </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drt-9b-nsZ">
-                                                                    <rect key="frame" x="215.5" y="0.0" width="67.5" height="37.5"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TTL ATUAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyA-uZ-46M">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="67.5" height="37.5"/>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <constraints>
-                                                                        <constraint firstItem="pyA-uZ-46M" firstAttribute="top" secondItem="drt-9b-nsZ" secondAttribute="top" id="06P-G3-rgN"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="pyA-uZ-46M" secondAttribute="bottom" id="0sZ-Ws-ReE"/>
-                                                                        <constraint firstItem="pyA-uZ-46M" firstAttribute="leading" secondItem="drt-9b-nsZ" secondAttribute="leading" id="SaI-g5-TKB"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="pyA-uZ-46M" secondAttribute="trailing" id="suc-kA-IPd"/>
-                                                                    </constraints>
-                                                                </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDn-F1-1iT">
-                                                                    <rect key="frame" x="287" y="0.0" width="68" height="37.5"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L/P" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77z-32-Wdk">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="67.5" height="37.5"/>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="bottom" secondItem="77z-32-Wdk" secondAttribute="bottom" id="BBo-rw-bU5"/>
-                                                                        <constraint firstItem="77z-32-Wdk" firstAttribute="top" secondItem="sDn-F1-1iT" secondAttribute="top" id="J4g-4c-LAK"/>
-                                                                        <constraint firstItem="77z-32-Wdk" firstAttribute="leading" secondItem="sDn-F1-1iT" secondAttribute="leading" id="Ptg-Sf-j5k"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="77z-32-Wdk" secondAttribute="trailing" id="Zlw-55-OcT"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -864,11 +828,11 @@
                                                             <rect key="frame" x="10" y="4" width="355" height="31"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wev-EA-CD8">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="68" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="115.5" height="31"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1.000,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRY-4o-uoP">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="31"/>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="115.5" height="31"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -882,11 +846,11 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zld-YJ-30S">
-                                                                    <rect key="frame" x="72" y="0.0" width="67.5" height="31"/>
+                                                                    <rect key="frame" x="119.5" y="0.0" width="116" height="31"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6789.55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-LP-9pr">
-                                                                            <rect key="frame" x="4" y="4" width="59.5" height="23"/>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                                                            <rect key="frame" x="4" y="4" width="108" height="23"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -908,11 +872,11 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBR-QS-tZA">
-                                                                    <rect key="frame" x="143.5" y="0.0" width="68" height="31"/>
+                                                                    <rect key="frame" x="239.5" y="0.0" width="115.5" height="31"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 9.500,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKb-WE-kFi">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="31"/>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="115.5" height="31"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -923,42 +887,6 @@
                                                                         <constraint firstItem="XKb-WE-kFi" firstAttribute="leading" secondItem="dBR-QS-tZA" secondAttribute="leading" id="ASQ-MS-IYy"/>
                                                                         <constraint firstItem="XKb-WE-kFi" firstAttribute="top" secondItem="dBR-QS-tZA" secondAttribute="top" id="YNP-zl-ezp"/>
                                                                         <constraint firstAttribute="trailing" secondItem="XKb-WE-kFi" secondAttribute="trailing" id="lpv-Nz-kQX"/>
-                                                                    </constraints>
-                                                                </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1C1-Ik-OGy">
-                                                                    <rect key="frame" x="215.5" y="0.0" width="67.5" height="31"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 9.500,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJ6-qK-Mw0">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="67.5" height="31"/>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="bottom" secondItem="lJ6-qK-Mw0" secondAttribute="bottom" id="MBa-3v-WWi"/>
-                                                                        <constraint firstItem="lJ6-qK-Mw0" firstAttribute="top" secondItem="1C1-Ik-OGy" secondAttribute="top" id="RPX-PV-0JV"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="lJ6-qK-Mw0" secondAttribute="trailing" id="SVI-BJ-z94"/>
-                                                                        <constraint firstItem="lJ6-qK-Mw0" firstAttribute="leading" secondItem="1C1-Ik-OGy" secondAttribute="leading" id="gMI-sQ-YX2"/>
-                                                                    </constraints>
-                                                                </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYp-2C-hXy">
-                                                                    <rect key="frame" x="287" y="0.0" width="68" height="31"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5.0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWg-V5-E0b">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="31"/>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <constraints>
-                                                                        <constraint firstItem="tWg-V5-E0b" firstAttribute="leading" secondItem="xYp-2C-hXy" secondAttribute="leading" id="IgV-8b-zFR"/>
-                                                                        <constraint firstItem="tWg-V5-E0b" firstAttribute="top" secondItem="xYp-2C-hXy" secondAttribute="top" id="Olx-41-ZhE"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="tWg-V5-E0b" secondAttribute="trailing" id="gqF-VA-MlW"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="tWg-V5-E0b" secondAttribute="bottom" id="sbr-Nq-6BX"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -989,11 +917,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imgMoeda" destination="8RU-DK-MG7" id="4JI-dj-ViH"/>
-                                            <outlet property="lbCapitalAtual" destination="lJ6-qK-Mw0" id="d0b-82-qPj"/>
                                             <outlet property="lbCapitalInvestido" destination="XKb-WE-kFi" id="8jN-FE-wbB"/>
                                             <outlet property="lbCotacao" destination="bRw-LP-9pr" id="Tvf-fZ-UnG"/>
                                             <outlet property="lbDataTransacao" destination="EUO-UR-jYm" id="pmM-1c-TLW"/>
-                                            <outlet property="lbPorcentagemLucro" destination="tWg-V5-E0b" id="Zga-P3-2Qa"/>
                                             <outlet property="lbQuantidade" destination="SRY-4o-uoP" id="7Zw-bM-oJv"/>
                                             <outlet property="lbTransacao" destination="aAX-yo-fhS" id="eRz-La-yrG"/>
                                         </connections>
