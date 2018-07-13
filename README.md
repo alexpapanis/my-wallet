@@ -18,3 +18,13 @@ Na tela inicial são exibidas as informações das moedas e de sua carteira. Na 
 Ao clicar em cima da cotação - de compra ou venda - da moeda é exibida uma janela onde ele escolhe a quantidade e efetiva a transação. Neste momento há diversas regras de validação, como: usuário não pode comprar valores superiores ao saldo disponível e usuário não pode vender mais moedas do que ele possui.
 
 No botão azul, no canto inferior direito, é possível visualizar todas as transações de compra e venda. 
+
+## Testes
+
+Alguns testes foram incluídos para testar a validação da transação de compra e de venda.
+
+
+## Observações
+
+- A API do Banco Central sugerida está com algumas inconsistências. Tinha vezes, ao longo do dia, que a cotação não era exibida, apenas do dia anterior. Para evitar qualquer problema, eu estou considerando a cotação do dia anterior (D-1).
+- Criei um banco local, usando CoreData, onde faço a persistência das transações e das informações da carteira do usuário.
